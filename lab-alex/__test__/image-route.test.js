@@ -3,6 +3,7 @@
 const request = require('superagent');
 const server = require('../server.js');
 const serverToggle = require('../lib/server-toggle.js');
+const PORT = process.env.PORT || 3000;
 
 const Image = require('../model/image.js');
 const Collection = require('../model/collection.js');
@@ -10,7 +11,7 @@ const User = require('../model/user.js');
 
 require('jest');
 
-const url = 'http://localhost:3000';
+const url = `http://localhost:${PORT}`;
 
 const exampleUser = {
   username: 'exampleuser',
